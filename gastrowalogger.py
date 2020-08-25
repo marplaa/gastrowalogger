@@ -385,7 +385,7 @@ def current_usage():
             if sensors[sensor]["type"] == type and sensors[sensor]["status"] == "active":
                 #sensor_name = sensor
                 #break
-                 return redirect('sensor/current?sensor=' + sensor)
+                 return redirect('/sensor/current?sensor=' + sensor)
     else:
         sensor_name = request.args.get("sensor")
      
