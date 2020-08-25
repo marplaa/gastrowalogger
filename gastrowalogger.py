@@ -394,7 +394,7 @@ def current_usage():
     entry = cur.fetchone()
     db.close()
     return render_template('current_usage.html', euro_per_m3 = entry['amount'], sensor = sensor_name)
-    return render_template('current_usage.html', euro_per_m3 = 1.7, sensor = sensor_name)
+    #return render_template('current_usage.html', euro_per_m3 = 1.7, sensor = sensor_name)
 
 @app.route('/sensor/_get_live_data', methods=['GET'])
 def _get_live_data():
