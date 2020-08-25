@@ -1,0 +1,11 @@
+__pycache__
+bin
+include
+lib
+Gastrowalogger-0.9
+logs/*
+gastrowalogger.db
+.project
+.pydevproject
+.settings
+pip-selfcheck.json

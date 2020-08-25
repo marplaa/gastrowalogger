@@ -1,0 +1,7 @@
+Flask==0.12.2
+Flask-Babel==0.11.2
+gunicorn==19.7.1
+pyserial==3.4
+python-socketio==1.8.1
+pytz==2017.2
+SerialBus==1.0
