@@ -389,11 +389,12 @@ def current_usage():
     else:
         sensor_name = request.args.get("sensor")
      
-    db = get_db()
-    cur = db.execute('SELECT amount FROM prices WHERE type = ? ORDER BY timestamp_from DESC', (types[sensors[sensor_name]["type"]],))
-    entry = cur.fetchone()
-    db.close()
-    return render_template('current_usage.html', euro_per_m3 = entry['amount'], sensor = sensor_name)
+    #db = get_db()
+    #cur = db.execute('SELECT amount FROM prices WHERE type = ? ORDER BY timestamp_from DESC', (types[sensors[sensor_name]["type"]],))
+    #entry = cur.fetchone()
+    #db.close()
+    #return render_template('current_usage.html', euro_per_m3 = entry['amount'], sensor = sensor_name)
+    return render_template('current_usage.html', euro_per_m3 = 1.7, sensor = sensor_name)
 
 @app.route('/sensor/_get_live_data', methods=['GET'])
 def _get_live_data():
