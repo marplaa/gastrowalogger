@@ -2,7 +2,7 @@
 import argparse
 from threading import Thread
 import subprocess
-
+import atexit
 import gastrowalogger_polling
 
 import configparser
@@ -65,7 +65,7 @@ def clean_up():
     #logging.info("gunicorn: " + error_lines.decode("utf-8"))
         
 
-# atexit.register(clean_up)
+atexit.register(clean_up)
 
 
 if __name__ == '__main__':
@@ -108,7 +108,7 @@ if __name__ == '__main__':
                 #restart polling thread
 
         if server_proc.poll() is not None:
-            print("Server Process stopped: " + server_proc.poll())
+            print("Server Process stopped: " + str(server_proc.poll()))
             start_server(config.get("GASTROWALOGGER", "HOST"), config.getint("GASTROWALOGGER", "PORT"))
     #clean_up()
 
