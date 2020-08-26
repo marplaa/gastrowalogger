@@ -39,6 +39,7 @@ def store_data():
 
     serialbus = SerialBusTCP()
     serialbus.connect(_sb_host, _sb_port)
+    print('connected serialbus')
 
     timestamp = int(time.time())
 
